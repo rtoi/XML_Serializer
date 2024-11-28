@@ -790,7 +790,7 @@ class XML_Unserializer extends PEAR
             break;
         case XML_UNSERIALIZER_WHITESPACE_TRIM:
         default:
-            $data = trim($this->_dataStack[$this->_depth]);
+            $data = empty($this->_dataStack[$this->_depth]) ? '' : trim($this->_dataStack[$this->_depth]);
             break;
         }
 
